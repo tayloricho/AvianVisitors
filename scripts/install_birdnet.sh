@@ -37,7 +37,7 @@ install_birdnet() {
   pip3 install wheel
   get_tf_whl
   LOOP_COUNT=2
-  while ! pip3 install -U -r ./requirements_custom.txt
+  while ! pip3 install -U -r ./requirements.txt
   do
     LOOP_COUNT=$(( LOOP_COUNT - 1 ))
     pip3 cache purge
