@@ -54,7 +54,8 @@ install_birdnet
 cd $my_dir/scripts || exit 1
 
 # tzlocal.get_localzone() will fail if the Debian specific /etc/timezone is not in sync
-CURRENT_TIMEZONE=$(timedatectl show --value --property=Timezone)
+#CURRENT_TIMEZONE=$(timedatectl show --value --property=Timezone)
+CURRENT_TIMEZONE="Europe/London"
 [ -f /etc/timezone ] && echo "$CURRENT_TIMEZONE" | sudo tee /etc/timezone > /dev/null
 
 ./install_language_label.sh || exit 1
